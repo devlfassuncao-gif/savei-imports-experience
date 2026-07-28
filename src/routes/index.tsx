@@ -149,6 +149,55 @@ function Landing() {
         </div>
       </section>
 
+      {/* Diferenciais — só a Save entrega */}
+      <section className="py-24 px-6 bg-white/[0.02] border-y border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-brand-green mb-4">
+              Só a Save entrega
+            </h2>
+            <p className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
+              Por que comprar com a <span className="text-brand-green">Save Imports</span>?
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-8 rounded-2xl border border-brand-green/20 bg-brand-green/5">
+              <div className="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center mb-6 border border-brand-green/20">
+                <svg className="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h.01M15 12h.01M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10Z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Contrato jurídico</h3>
+              <p className="text-white/60 text-sm leading-relaxed">
+                Você recebe um contrato com validade jurídica assinado digitalmente pela plataforma Autentique, com total segurança.
+              </p>
+            </div>
+            <div className="p-8 rounded-2xl border border-white/5 bg-white/[0.03]">
+              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 border border-white/10">
+                <svg className="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 6.376 6.376 0 0 1 6.338-7.27 6.375 6.375 0 0 1 6.339 7.27Z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Transparência total</h3>
+              <p className="text-white/60 text-sm leading-relaxed">
+                Dentro do contrato você encontra informações sobre a história pessoal do responsável pela Save, dados do produto, termos de garantia e prazos.
+              </p>
+            </div>
+            <div className="p-8 rounded-2xl border border-white/5 bg-white/[0.03]">
+              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 border border-white/10">
+                <svg className="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Unboxing personalizado</h3>
+              <p className="text-white/60 text-sm leading-relaxed">
+                Para clientes de Belém/PA, entregamos pessoalmente com um ritual de abertura exclusivo que torna a experiência inesquecível.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Process — 7 steps */}
       <section id="processo" className="py-24 px-6 bg-white/[0.02] border-y border-white/5">
