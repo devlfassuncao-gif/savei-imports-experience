@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Instagram, MapPin, ShieldCheck, FileText, RefreshCw } from "lucide-react";
+import { Instagram, MapPin } from "lucide-react";
 import heroExperience from "@/assets/hero-experience.jpg";
 
 const WHATSAPP_SELLER = "https://wa.me/5591986122089?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20adquirir%20um%20iPhone%20na%20Save%20Imports.";
@@ -74,23 +74,6 @@ const steps = [
   },
 ];
 
-const differentials = [
-  {
-    icon: FileText,
-    title: "Contrato jurídico completo",
-    body: "Trabalhamos com contrato jurídico para que você tenha acesso a dados importantes sobre a história pessoal do responsável da Save.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Informações do produto",
-    body: "Dentro do contrato você encontra todas as informações sobre o seu produto — origem, especificações e procedência.",
-  },
-  {
-    icon: RefreshCw,
-    title: "Garantia & prazos",
-    body: "Termos de garantia e prazos claros dentro do próprio contrato. Sem letras miúdas, sem surpresa.",
-  },
-];
 
 // TikTok icon (lucide não possui um oficial)
 function TikTokIcon({ className = "" }: { className?: string }) {
