@@ -369,9 +369,8 @@ function Landing() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between gap-12 mb-12">
             <div className="max-w-xs">
-              <div className="text-xl font-extrabold mb-4">
-                Save<span className="text-brand-green"> Imports</span>
-              </div>
+              <img src={saveLogo.url} alt="Save Imports" className="h-10 w-auto mb-4" />
+
               <p className="text-xs text-white/40 leading-relaxed italic mb-4">
                 Importamos o que importa para você. Aquisição segura de iPhones em Belém/PA, com
                 contrato jurídico e experiência premium.
