@@ -23,15 +23,16 @@ function TermsPage() {
         </h1>
         <div className="space-y-6 text-white/70 leading-relaxed text-sm md:text-base">
           <p>
-            Bem-vindo à Saveiimports. Ao acessar este site você concorda com os termos abaixo,
+            Bem-vindo à Save Imports. Ao acessar este site você concorda com os termos abaixo,
             que regulam o uso das informações, do atendimento e do processo de aquisição
             oferecido.
           </p>
-          <h2 className="text-xl font-bold text-white pt-4">1. Sobre a Saveiimports</h2>
+          <h2 className="text-xl font-bold text-white pt-4">1. Sobre a Save Imports</h2>
           <p>
-            A Saveiimports atua na intermediação e comercialização de dispositivos iPhone,
-            oferecendo consultoria, formalização contratual e logística de entrega. Todos os
-            atendimentos são iniciados por WhatsApp.
+            A Save Imports (CNPJ 60.232.830/0001-76), sediada em Belém/PA, atua na
+            intermediação e comercialização de dispositivos iPhone, oferecendo consultoria,
+            formalização contratual e logística de entrega. Todos os atendimentos são
+            iniciados por WhatsApp.
           </p>
           <h2 className="text-xl font-bold text-white pt-4">2. Uso do site</h2>
           <p>
