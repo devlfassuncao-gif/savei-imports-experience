@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Instagram, MapPin } from "lucide-react";
-import heroExperience from "@/assets/hero-experience.jpg";
+import heroExperience from "@/assets/iphone-hero.png.asset.json";
+import saveLogo from "@/assets/save-imports-logo.png.asset.json";
 
 const WHATSAPP_SELLER = "https://wa.me/5591986122089?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20adquirir%20um%20iPhone%20na%20Save%20Imports.";
 const WHATSAPP_LUCAS = "https://wa.me/5591981035200?text=Tenho%20interesse%20em%20criar%20um%20site%20para%20a%20minha%20loja";
