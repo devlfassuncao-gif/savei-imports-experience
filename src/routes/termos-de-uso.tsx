@@ -3,8 +3,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/termos-de-uso")({
   head: () => ({
     meta: [
-      { title: "Termos de Uso — Saveiimports" },
-      { name: "description", content: "Termos de uso do site Saveiimports." },
+      { title: "Termos de Uso — Save Imports" },
+      { name: "description", content: "Termos de uso do site Save Imports." },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -23,15 +23,16 @@ function TermsPage() {
         </h1>
         <div className="space-y-6 text-white/70 leading-relaxed text-sm md:text-base">
           <p>
-            Bem-vindo à Saveiimports. Ao acessar este site você concorda com os termos abaixo,
+            Bem-vindo à Save Imports. Ao acessar este site você concorda com os termos abaixo,
             que regulam o uso das informações, do atendimento e do processo de aquisição
             oferecido.
           </p>
-          <h2 className="text-xl font-bold text-white pt-4">1. Sobre a Saveiimports</h2>
+          <h2 className="text-xl font-bold text-white pt-4">1. Sobre a Save Imports</h2>
           <p>
-            A Saveiimports atua na intermediação e comercialização de dispositivos iPhone,
-            oferecendo consultoria, formalização contratual e logística de entrega. Todos os
-            atendimentos são iniciados por WhatsApp.
+            A Save Imports (CNPJ 60.232.830/0001-76), sediada em Belém/PA, atua na
+            intermediação e comercialização de dispositivos iPhone, oferecendo consultoria,
+            formalização contratual e logística de entrega. Todos os atendimentos são
+            iniciados por WhatsApp.
           </p>
           <h2 className="text-xl font-bold text-white pt-4">2. Uso do site</h2>
           <p>
@@ -45,10 +46,13 @@ function TermsPage() {
             pagamento. Aceitamos Pix (com desconto), cartão de crédito em até 12x e composição
             com mais de um cartão.
           </p>
-          <h2 className="text-xl font-bold text-white pt-4">4. Entrega</h2>
+          <h2 className="text-xl font-bold text-white pt-4">4. Entrega, garantia e trocas</h2>
           <p>
             A entrega pode ser realizada por transportadora ao endereço informado ou, para
-            clientes da mesma região, entregue pessoalmente com unboxing personalizado.
+            clientes de Belém/PA, entregue pessoalmente com unboxing personalizado. As trocas
+            serão feitas no ato do recebimento do produto, desde que haja confirmação de que
+            o item chegou avariado ou diferente do solicitado. Prazos e termos de garantia
+            estão descritos no contrato de aquisição.
           </p>
           <h2 className="text-xl font-bold text-white pt-4">5. Contato</h2>
           <p>

@@ -1,23 +1,26 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Instagram, MapPin, ShieldCheck, FileText, RefreshCw } from "lucide-react";
 import heroExperience from "@/assets/hero-experience.jpg";
 
-const WHATSAPP_SELLER = "https://wa.me/5591986122089?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20adquirir%20um%20iPhone%20na%20Saveiimports.";
+const WHATSAPP_SELLER = "https://wa.me/5591986122089?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20adquirir%20um%20iPhone%20na%20Save%20Imports.";
 const WHATSAPP_LUCAS = "https://wa.me/5591981035200?text=Tenho%20interesse%20em%20criar%20um%20site%20para%20a%20minha%20loja";
+const INSTAGRAM_URL = "https://instagram.com/saveiimports";
+const TIKTOK_URL = "https://tiktok.com/@saveiimports";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Saveiimports — Aquisição de iPhone com segurança jurídica" },
+      { title: "Save Imports — Importamos o que importa para você" },
       {
         name: "description",
         content:
-          "A experiência Saveiimports: consultoria, contrato com validade jurídica via Jotform, pagamento seguro e unboxing personalizado. Chame no WhatsApp.",
+          "Save Imports: aquisição de iPhone em Belém/PA com contrato jurídico, Pix com desconto, cartão em até 12x e unboxing personalizado.",
       },
-      { property: "og:title", content: "Saveiimports — Aquisição segura de iPhone" },
+      { property: "og:title", content: "Save Imports — Importamos o que importa para você" },
       {
         property: "og:description",
         content:
-          "Uma jornada premium do primeiro contato ao unboxing. Segurança jurídica, Pix com desconto, cartão em até 12x.",
+          "Contrato jurídico, pagamento flexível e unboxing premium. Atendimento em Belém/PA pelo WhatsApp.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -71,6 +74,38 @@ const steps = [
   },
 ];
 
+const differentials = [
+  {
+    icon: FileText,
+    title: "Contrato jurídico completo",
+    body: "Trabalhamos com contrato jurídico para que você tenha acesso a dados importantes sobre a história pessoal do responsável da Save.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Informações do produto",
+    body: "Dentro do contrato você encontra todas as informações sobre o seu produto — origem, especificações e procedência.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Garantia & prazos",
+    body: "Termos de garantia e prazos claros dentro do próprio contrato. Sem letras miúdas, sem surpresa.",
+  },
+];
+
+// TikTok icon (lucide não possui um oficial)
+function TikTokIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.86a8.16 8.16 0 0 0 4.77 1.52V6.93a4.85 4.85 0 0 1-1.84-.24z" />
+    </svg>
+  );
+}
+
 function Landing() {
   return (
     <div className="min-h-screen bg-brand-bg text-white font-sans">
@@ -78,7 +113,7 @@ function Landing() {
       <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-brand-bg/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="text-xl md:text-2xl font-extrabold tracking-tighter">
-            Save<span className="text-brand-green">ii</span>mports
+            Save<span className="text-brand-green"> Imports</span>
           </div>
           <a
             href={WHATSAPP_SELLER}
@@ -104,7 +139,10 @@ function Landing() {
             Aquisição Premium de iPhone
           </span>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.05]">
-            A sua jornada <span className="text-brand-green">Premium</span> começa na confiança.
+            Importamos o que <span className="text-brand-green">importa</span> para você{" "}
+            <span className="inline-block align-middle" style={{ color: "#41e825" }} aria-label="coração verde">
+              ♥
+            </span>
           </h1>
           <p className="text-lg md:text-xl text-white/60 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
             Trabalhamos exclusivamente com iPhones. Uma experiência de aquisição transparente,
@@ -126,6 +164,34 @@ function Landing() {
             >
               Ver como funciona ↓
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Differentials */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-brand-green mb-4">
+              Diferenciais Save
+            </h2>
+            <p className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
+              O que só a <span className="text-brand-green">Save Imports</span> entrega.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {differentials.map((d) => (
+              <div
+                key={d.title}
+                className="p-8 rounded-2xl border border-white/5 bg-white/[0.03] hover:border-brand-green/30 transition-colors"
+              >
+                <div className="w-12 h-12 rounded-xl bg-brand-green/10 border border-brand-green/30 flex items-center justify-center mb-6">
+                  <d.icon className="w-5 h-5 text-brand-green" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">{d.title}</h3>
+                <p className="text-white/55 text-sm leading-relaxed">{d.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -224,15 +290,18 @@ function Landing() {
             <div className="grid grid-cols-2 gap-4 max-w-md">
               <div className="p-5 rounded-2xl border border-brand-green/30 bg-brand-green/5">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-brand-green mb-2">
-                  Seg — Sex
+                  Seg — Sáb
                 </p>
-                <p className="text-2xl font-extrabold">09h — 21h</p>
+                <p className="text-2xl font-extrabold">09h — 18h</p>
               </div>
               <div className="p-5 rounded-2xl border border-white/10 bg-white/[0.03]">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-white/50 mb-2">
-                  Sábado
+                  Área de atendimento
                 </p>
-                <p className="text-2xl font-extrabold">09h — 15h</p>
+                <p className="text-2xl font-extrabold flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-brand-green" />
+                  Belém/PA
+                </p>
               </div>
             </div>
           </div>
@@ -240,7 +309,7 @@ function Landing() {
           <div className="relative">
             <img
               src={heroExperience}
-              alt="Experiência de unboxing premium Saveiimports"
+              alt="Experiência de unboxing premium Save Imports"
               width={1200}
               height={900}
               loading="lazy"
@@ -251,6 +320,26 @@ function Landing() {
               style={{ background: "radial-gradient(circle at 30% 70%, rgba(65,232,37,0.4), transparent 60%)" }}
               aria-hidden
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Warranty policy */}
+      <section className="py-24 px-6 bg-white/[0.02] border-y border-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-brand-green mb-4">
+            Garantia & Trocas
+          </h2>
+          <p className="text-3xl md:text-4xl font-bold mb-8">
+            Política de <span className="text-brand-green">garantia e troca</span>.
+          </p>
+          <div className="p-8 md:p-10 rounded-2xl border border-brand-green/20 bg-brand-green/5 text-left">
+            <p className="text-white/75 leading-relaxed text-base md:text-lg">
+              As trocas serão feitas <span className="text-white font-semibold">no ato do recebimento do produto</span>,
+              desde que haja confirmação de que o item chegou <span className="text-brand-green">avariado</span> ou{" "}
+              <span className="text-brand-green">diferente do solicitado</span>. Toda a formalização e prazos de
+              garantia estão descritos no contrato de aquisição.
+            </p>
           </div>
         </div>
       </section>
@@ -278,10 +367,14 @@ function Landing() {
           <div className="flex flex-col md:flex-row justify-between gap-12 mb-12">
             <div className="max-w-xs">
               <div className="text-xl font-extrabold mb-4">
-                Save<span className="text-brand-green">ii</span>mports
+                Save<span className="text-brand-green"> Imports</span>
               </div>
-              <p className="text-xs text-white/40 leading-relaxed italic">
-                Aquisição segura e transparente de iPhones, com validade jurídica e experiência premium.
+              <p className="text-xs text-white/40 leading-relaxed italic mb-4">
+                Importamos o que importa para você. Aquisição segura de iPhones em Belém/PA, com
+                contrato jurídico e experiência premium.
+              </p>
+              <p className="text-[10px] text-white/40 uppercase tracking-widest">
+                CNPJ 60.232.830/0001-76
               </p>
             </div>
             <div className="flex flex-wrap gap-12">
@@ -310,15 +403,36 @@ function Landing() {
                   href={WHATSAPP_SELLER}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-white/60 hover:text-brand-green transition-colors block"
+                  className="text-sm text-white/60 hover:text-brand-green transition-colors block mb-4"
                 >
                   WhatsApp: (91) 98612-2089
                 </a>
+                <div className="flex items-center gap-3">
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram @saveiimports"
+                    className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-white/70 hover:text-brand-green hover:border-brand-green transition-colors"
+                  >
+                    <Instagram className="w-4 h-4" />
+                  </a>
+                  <a
+                    href={TIKTOK_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok @saveiimports"
+                    className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-white/70 hover:text-brand-green hover:border-brand-green transition-colors"
+                  >
+                    <TikTokIcon className="w-4 h-4" />
+                  </a>
+                  <span className="text-xs text-white/50 ml-1">@saveiimports</span>
+                </div>
               </div>
             </div>
           </div>
           <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-white/40 uppercase tracking-widest">
-            <p>© {new Date().getFullYear()} Saveiimports. Todos os direitos reservados.</p>
+            <p>© {new Date().getFullYear()} Save Imports. Todos os direitos reservados.</p>
             <p>
               Feito por{" "}
               <a
