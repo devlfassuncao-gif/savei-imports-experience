@@ -3,8 +3,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/politica-de-privacidade")({
   head: () => ({
     meta: [
-      { title: "Política de Privacidade — Saveiimports" },
-      { name: "description", content: "Política de privacidade do site Saveiimports." },
+      { title: "Política de Privacidade — Save Imports" },
+      { name: "description", content: "Política de privacidade do site Save Imports." },
       { name: "robots", content: "noindex" },
     ],
   }),
