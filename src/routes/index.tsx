@@ -312,7 +312,7 @@ function Landing() {
 
           <div className="relative">
             <img
-              src={heroExperience}
+              src={heroExperience.url}
               alt="Experiência de unboxing premium Save Imports"
               width={1200}
               height={900}
