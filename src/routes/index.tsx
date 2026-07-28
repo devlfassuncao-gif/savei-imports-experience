@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Instagram, MapPin } from "lucide-react";
-import heroExperience from "@/assets/hero-experience.jpg";
+import heroExperience from "@/assets/iphone-hero.png.asset.json";
+import saveLogo from "@/assets/save-imports-logo.png.asset.json";
 
 const WHATSAPP_SELLER = "https://wa.me/5591986122089?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20adquirir%20um%20iPhone%20na%20Save%20Imports.";
 const WHATSAPP_LUCAS = "https://wa.me/5591981035200?text=Tenho%20interesse%20em%20criar%20um%20site%20para%20a%20minha%20loja";
@@ -95,9 +96,8 @@ function Landing() {
       {/* Nav */}
       <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-brand-bg/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="text-xl md:text-2xl font-extrabold tracking-tighter">
-            Save<span className="text-brand-green"> Imports</span>
-          </div>
+          <img src={saveLogo.url} alt="Save Imports" className="h-8 md:h-10 w-auto" />
+
           <a
             href={WHATSAPP_SELLER}
             target="_blank"
@@ -311,7 +311,7 @@ function Landing() {
 
           <div className="relative">
             <img
-              src={heroExperience}
+              src={heroExperience.url}
               alt="Experiência de unboxing premium Save Imports"
               width={1200}
               height={900}
@@ -369,9 +369,8 @@ function Landing() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between gap-12 mb-12">
             <div className="max-w-xs">
-              <div className="text-xl font-extrabold mb-4">
-                Save<span className="text-brand-green"> Imports</span>
-              </div>
+              <img src={saveLogo.url} alt="Save Imports" className="h-10 w-auto mb-4" />
+
               <p className="text-xs text-white/40 leading-relaxed italic mb-4">
                 Importamos o que importa para você. Aquisição segura de iPhones em Belém/PA, com
                 contrato jurídico e experiência premium.
