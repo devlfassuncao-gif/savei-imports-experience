@@ -23,8 +23,9 @@ function PrivacyPage() {
         </h1>
         <div className="space-y-6 text-white/70 leading-relaxed text-sm md:text-base">
           <p>
-            Sua privacidade é levada a sério pela Saveiimports. Esta política descreve como
-            tratamos as informações compartilhadas durante o atendimento e a aquisição.
+            Sua privacidade é levada a sério pela Save Imports (CNPJ 60.232.830/0001-76). Esta
+            política descreve como tratamos as informações compartilhadas durante o atendimento
+            e a aquisição.
           </p>
           <h2 className="text-xl font-bold text-white pt-4">1. Dados coletados</h2>
           <p>
