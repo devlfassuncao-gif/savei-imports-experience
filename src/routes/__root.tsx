@@ -77,11 +77,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Saveiimports — Aquisição premium de iPhone" },
+      { title: "Save Imports — Importamos o que importa para você" },
       {
         name: "description",
         content:
-          "Aquisição segura de iPhone com contrato validado juridicamente, pagamento flexível e unboxing personalizado.",
+          "Save Imports em Belém/PA: aquisição de iPhone com contrato jurídico, pagamento flexível e unboxing personalizado.",
       },
       { name: "theme-color", content: "#071013" },
     ],
