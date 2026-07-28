@@ -3,8 +3,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/termos-de-uso")({
   head: () => ({
     meta: [
-      { title: "Termos de Uso — Saveiimports" },
-      { name: "description", content: "Termos de uso do site Saveiimports." },
+      { title: "Termos de Uso — Save Imports" },
+      { name: "description", content: "Termos de uso do site Save Imports." },
       { name: "robots", content: "noindex" },
     ],
   }),
