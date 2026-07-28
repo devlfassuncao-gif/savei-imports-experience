@@ -1,24 +1,338 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import heroExperience from "@/assets/hero-experience.jpg";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const WHATSAPP_SELLER = "https://wa.me/5591986122089?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20adquirir%20um%20iPhone%20na%20Saveiimports.";
+const WHATSAPP_LUCAS = "https://wa.me/5591981035200?text=Tenho%20interesse%20em%20criar%20um%20site%20para%20a%20minha%20loja";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Saveiimports — Aquisição de iPhone com segurança jurídica" },
+      {
+        name: "description",
+        content:
+          "A experiência Saveiimports: consultoria, contrato com validade jurídica via Jotform, pagamento seguro e unboxing personalizado. Chame no WhatsApp.",
+      },
+      { property: "og:title", content: "Saveiimports — Aquisição segura de iPhone" },
+      {
+        property: "og:description",
+        content:
+          "Uma jornada premium do primeiro contato ao unboxing. Segurança jurídica, Pix com desconto, cartão em até 12x.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Landing,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+const steps = [
+  {
+    n: "01",
+    title: "Primeiro Contato",
+    body: "Você chama nosso vendedor direto no WhatsApp. Atendimento humano, sem robô, sem burocracia.",
+    highlight: false,
+  },
+  {
+    n: "02",
+    title: "Consultoria",
+    body: "Conversa com o vendedor para alinhar o modelo de interesse, cor e capacidade ideais para você.",
+    highlight: false,
+  },
+  {
+    n: "03",
+    title: "Contrato de Aquisição",
+    body: "Formalizamos todos os detalhes do pedido em um contrato claro e transparente.",
+    highlight: false,
+  },
+  {
+    n: "04",
+    title: "Validade Jurídica",
+    body: "Contrato enviado pela plataforma Jotform com assinatura digital e plena validade jurídica.",
+    highlight: true,
+  },
+  {
+    n: "05",
+    title: "Pagamento Seguro",
+    body: "Neste momento a compra é feita na maior segurança possível — dados blindados e comprovação instantânea.",
+    highlight: false,
+  },
+  {
+    n: "06",
+    title: "Envio ao seu Endereço",
+    body: "Logística acompanhada e monitorada até chegar em suas mãos com integridade total.",
+    highlight: false,
+  },
+  {
+    n: "07",
+    title: "Unboxing Personalizado",
+    body: "Na mesma região, entrego pessoalmente com uma experiência de unboxing incrível — um ritual de abertura só seu.",
+    highlight: true,
+  },
+];
+
+function Landing() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-brand-bg text-white font-sans">
+      {/* Nav */}
+      <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-brand-bg/80 backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <div className="text-xl md:text-2xl font-extrabold tracking-tighter">
+            Save<span className="text-brand-green">ii</span>mports
+          </div>
+          <a
+            href={WHATSAPP_SELLER}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] md:text-xs font-bold uppercase tracking-widest border border-brand-green px-4 md:px-6 py-2 rounded-full text-brand-green hover:bg-brand-green hover:text-brand-bg transition-colors"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="relative pt-40 pb-24 px-6 overflow-hidden">
+        <div className="absolute inset-0 bg-grid-fade pointer-events-none" aria-hidden />
+        <div
+          className="absolute top-10 right-0 w-[500px] h-[500px] rounded-full blur-[140px] pointer-events-none"
+          style={{ background: "rgba(65,232,37,0.12)", animation: "float-pulse 8s ease-in-out infinite" }}
+          aria-hidden
+        />
+        <div className="max-w-4xl mx-auto text-center relative">
+          <span className="inline-block text-[10px] font-bold uppercase tracking-[0.3em] text-brand-green mb-6 border border-brand-green/30 rounded-full px-4 py-1.5">
+            Aquisição Premium de iPhone
+          </span>
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.05]">
+            A sua jornada <span className="text-brand-green">Premium</span> começa na confiança.
+          </h1>
+          <p className="text-lg md:text-xl text-white/60 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            Trabalhamos exclusivamente com iPhones. Uma experiência de aquisição transparente,
+            com <span className="text-white">validade jurídica</span> e um unboxing feito
+            para ser inesquecível.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={WHATSAPP_SELLER}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex bg-brand-green text-brand-bg font-bold text-base px-8 py-4 rounded-full hover:scale-[1.03] active:scale-95 transition-transform shadow-[0_0_60px_-15px_rgba(65,232,37,0.6)]"
+            >
+              Chamar vendedor no WhatsApp
+            </a>
+            <a
+              href="#processo"
+              className="text-xs font-bold uppercase tracking-widest text-white/60 hover:text-brand-green transition-colors"
+            >
+              Ver como funciona ↓
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Process — 7 steps */}
+      <section id="processo" className="py-24 px-6 bg-white/[0.02] border-y border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-brand-green mb-4">
+              O Caminho Save / 01 — 07
+            </h2>
+            <p className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
+              Uma jornada desenhada para eliminar qualquer <span className="text-brand-green">incerteza</span>.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {steps.map((s) => (
+              <div
+                key={s.n}
+                className={`p-8 rounded-2xl border transition-all group ${
+                  s.highlight
+                    ? "border-brand-green/30 bg-brand-green/5"
+                    : "border-white/5 bg-white/[0.03] hover:border-brand-green/30"
+                }`}
+              >
+                <span className="text-4xl font-extrabold text-brand-green/30 group-hover:text-brand-green transition-colors">
+                  {s.n}
+                </span>
+                <h3 className="text-xl font-bold mt-4 mb-3">{s.title}</h3>
+                <p className="text-white/55 text-sm leading-relaxed">{s.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Payment */}
+      <section className="py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-brand-green mb-4">
+              Formas de Pagamento
+            </h2>
+            <p className="text-3xl md:text-4xl font-bold">
+              Flexibilidade <span className="text-brand-green">total</span> para você.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-8 rounded-2xl border border-brand-green/30 bg-brand-green/5 text-center">
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-green">
+                À vista
+              </span>
+              <p className="text-4xl font-extrabold text-brand-green my-4">PIX</p>
+              <p className="text-sm text-white/60">Desconto exclusivo para pagamentos via Pix.</p>
+            </div>
+            <div className="p-8 rounded-2xl border border-white/5 bg-white/[0.03] text-center">
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">
+                Cartão de Crédito
+              </span>
+              <p className="text-4xl font-extrabold my-4">
+                até <span className="text-brand-green">12x</span>
+              </p>
+              <p className="text-sm text-white/60">Parcelamento facilitado no seu cartão.</p>
+            </div>
+            <div className="p-8 rounded-2xl border border-white/5 bg-white/[0.03] text-center">
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">
+                Flexibilidade
+              </span>
+              <p className="text-4xl font-extrabold my-4">
+                2+ <span className="text-brand-green">cartões</span>
+              </p>
+              <p className="text-sm text-white/60">Combine mais de um cartão para compor sua compra.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience + Hours */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-brand-green">
+              A experiência Save
+            </span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mt-4 mb-6 leading-tight">
+              Venha viver a <br />
+              <span className="text-brand-green italic">experiência Save!</span>
+            </h2>
+            <p className="text-white/60 mb-10 leading-relaxed max-w-lg">
+              Cada aquisição é um ritual. Da primeira mensagem no WhatsApp ao momento em que o
+              lacre é rompido, tudo foi pensado para que a espera se transforme em celebração.
+            </p>
+
+            <div className="grid grid-cols-2 gap-4 max-w-md">
+              <div className="p-5 rounded-2xl border border-brand-green/30 bg-brand-green/5">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-brand-green mb-2">
+                  Seg — Sex
+                </p>
+                <p className="text-2xl font-extrabold">09h — 21h</p>
+              </div>
+              <div className="p-5 rounded-2xl border border-white/10 bg-white/[0.03]">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-white/50 mb-2">
+                  Sábado
+                </p>
+                <p className="text-2xl font-extrabold">09h — 15h</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative">
+            <img
+              src={heroExperience}
+              alt="Experiência de unboxing premium Saveiimports"
+              width={1200}
+              height={900}
+              loading="lazy"
+              className="w-full aspect-[4/3] object-cover rounded-3xl border border-white/10"
+            />
+            <div
+              className="absolute -inset-4 -z-10 rounded-[2rem] blur-3xl opacity-40"
+              style={{ background: "radial-gradient(circle at 30% 70%, rgba(65,232,37,0.4), transparent 60%)" }}
+              aria-hidden
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Bar */}
+      <div className="bg-brand-green py-8 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+          <span className="text-brand-bg font-extrabold text-xl md:text-2xl">
+            Pronto para viver a experiência Save?
+          </span>
+          <a
+            href={WHATSAPP_SELLER}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-brand-bg text-brand-green px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform whitespace-nowrap"
+          >
+            Chamar vendedor agora
+          </a>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="py-16 px-6 border-t border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between gap-12 mb-12">
+            <div className="max-w-xs">
+              <div className="text-xl font-extrabold mb-4">
+                Save<span className="text-brand-green">ii</span>mports
+              </div>
+              <p className="text-xs text-white/40 leading-relaxed italic">
+                Aquisição segura e transparente de iPhones, com validade jurídica e experiência premium.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-12">
+              <div>
+                <h4 className="text-xs font-bold uppercase text-brand-green mb-4 tracking-widest">
+                  Institucional
+                </h4>
+                <ul className="space-y-3 text-sm text-white/60">
+                  <li>
+                    <Link to="/termos-de-uso" className="hover:text-brand-green transition-colors">
+                      Termos de Uso
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/politica-de-privacidade" className="hover:text-brand-green transition-colors">
+                      Política de Privacidade
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-xs font-bold uppercase text-brand-green mb-4 tracking-widest">
+                  Contato
+                </h4>
+                <a
+                  href={WHATSAPP_SELLER}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/60 hover:text-brand-green transition-colors block"
+                >
+                  WhatsApp: (91) 98612-2089
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-white/40 uppercase tracking-widest">
+            <p>© {new Date().getFullYear()} Saveiimports. Todos os direitos reservados.</p>
+            <p>
+              Feito por{" "}
+              <a
+                href={WHATSAPP_LUCAS}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-green hover:underline"
+              >
+                Lucas Felippe
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
