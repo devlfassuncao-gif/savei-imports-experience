@@ -46,10 +46,13 @@ function TermsPage() {
             pagamento. Aceitamos Pix (com desconto), cartão de crédito em até 12x e composição
             com mais de um cartão.
           </p>
-          <h2 className="text-xl font-bold text-white pt-4">4. Entrega</h2>
+          <h2 className="text-xl font-bold text-white pt-4">4. Entrega, garantia e trocas</h2>
           <p>
             A entrega pode ser realizada por transportadora ao endereço informado ou, para
-            clientes da mesma região, entregue pessoalmente com unboxing personalizado.
+            clientes de Belém/PA, entregue pessoalmente com unboxing personalizado. As trocas
+            serão feitas no ato do recebimento do produto, desde que haja confirmação de que
+            o item chegou avariado ou diferente do solicitado. Prazos e termos de garantia
+            estão descritos no contrato de aquisição.
           </p>
           <h2 className="text-xl font-bold text-white pt-4">5. Contato</h2>
           <p>
