@@ -96,9 +96,8 @@ function Landing() {
       {/* Nav */}
       <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-brand-bg/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="text-xl md:text-2xl font-extrabold tracking-tighter">
-            Save<span className="text-brand-green"> Imports</span>
-          </div>
+          <img src={saveLogo.url} alt="Save Imports" className="h-8 md:h-10 w-auto" />
+
           <a
             href={WHATSAPP_SELLER}
             target="_blank"
