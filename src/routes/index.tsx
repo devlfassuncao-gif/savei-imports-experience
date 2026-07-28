@@ -51,7 +51,7 @@ const steps = [
   {
     n: "04",
     title: "Validade Jurídica",
-    body: "Contrato enviado pela plataforma Jotform com assinatura digital e plena validade jurídica.",
+    body: "Contrato enviado pela plataforma Autentique com assinatura digital e plena validade jurídica.",
     highlight: true,
   },
   {
@@ -145,9 +145,7 @@ function Landing() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-white/60 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-            Trabalhamos exclusivamente com iPhones. Uma experiência de aquisição transparente,
-            com <span className="text-white">validade jurídica</span> e um unboxing feito
-            para ser inesquecível.
+            Trabalhamos exclusivamente com <span className="text-white">produtos importados</span>: iPhone, Macs, Câmeras e Lentes.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -168,33 +166,6 @@ function Landing() {
         </div>
       </section>
 
-      {/* Differentials */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-brand-green mb-4">
-              Diferenciais Save
-            </h2>
-            <p className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
-              O que só a <span className="text-brand-green">Save Imports</span> entrega.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {differentials.map((d) => (
-              <div
-                key={d.title}
-                className="p-8 rounded-2xl border border-white/5 bg-white/[0.03] hover:border-brand-green/30 transition-colors"
-              >
-                <div className="w-12 h-12 rounded-xl bg-brand-green/10 border border-brand-green/30 flex items-center justify-center mb-6">
-                  <d.icon className="w-5 h-5 text-brand-green" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">{d.title}</h3>
-                <p className="text-white/55 text-sm leading-relaxed">{d.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Process — 7 steps */}
       <section id="processo" className="py-24 px-6 bg-white/[0.02] border-y border-white/5">
@@ -254,9 +225,9 @@ function Landing() {
                 Cartão de Crédito
               </span>
               <p className="text-4xl font-extrabold my-4">
-                até <span className="text-brand-green">12x</span>
+                até <span className="text-brand-green">12x</span> ou <span className="text-brand-green">18x</span>
               </p>
-              <p className="text-sm text-white/60">Parcelamento facilitado no seu cartão.</p>
+              <p className="text-sm text-white/60">Parcelamento facilitado no seu cartão em até 12x ou 18x.</p>
             </div>
             <div className="p-8 rounded-2xl border border-white/5 bg-white/[0.03] text-center">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">
